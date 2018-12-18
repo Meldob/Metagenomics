@@ -1,0 +1,4 @@
+@HD	VN:1.6	SO:coordinate
+@SQ	SN:k141_1	LN:306
+@SQ	SN:k141_2	LN:22016
+@PG	ID:bwa	PN:bwa	VN:0.7.17-r1188	CL:bwa mem -t 40 /tmp/coverm-bwa-index.niWbdrIc2Yxk/final.contigs.fa nostoc_azollae_plasmid.fixed.1.fq nostoc_azollae_plasmid.fixed.2.fq

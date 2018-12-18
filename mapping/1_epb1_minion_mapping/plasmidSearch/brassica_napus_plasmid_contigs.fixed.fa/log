@@ -1,0 +1,606 @@
+MEGAHIT v1.1.2
+--- [Tue Dec 11 15:50:35 2018] Start assembly. Number of CPU threads 40 ---
+--- [Tue Dec 11 15:50:35 2018] Available memory: 270381064192, used: 243342957772
+--- [Tue Dec 11 15:50:35 2018] Converting reads to binaries ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core buildlib brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib
+    [read_lib_functions-inl.h  : 209]     Lib 0 (brassica_napus_plasmid.fixed.1.fq,brassica_napus_plasmid.fixed.2.fq): pe, 944 reads, 150 max length
+    [utils.h                   : 126]     Real: 0.0086	user: 0.0080	sys: 0.0000	maxrss: 6740
+--- [Tue Dec 11 15:50:35 2018] k list: 21,29,39,59,79,99,119,141 ---
+--- [Tue Dec 11 15:50:35 2018] Extracting solid (k+1)-mers for k = 21 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build count -k 21 -m 2 --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k21/21 --num_cpu_threads 40 --num_output_threads 13 --read_lib_file brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib
+    [sdbg_builder.cpp          : 112]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 113]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [cx1_kmer_count.cpp        : 136]     944 reads, 150 max read length
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0006
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_kmer_count.cpp        : 227]     2 words per substring, 2 words per edge
+    [cx1_kmer_count.cpp        : 322]     Set: 93744, 243237005608
+    [cx1_kmer_count.cpp        : 356]     16236, 1200 93744 243237005608
+    [cx1_kmer_count.cpp        : 363]     Memory for reads: 44100
+    [cx1_kmer_count.cpp        : 364]     max # lv.1 items = 16236
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.1092
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 17
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0022
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0035
+    [cx1.h                     : 515]     Lv1 scanning from bucket 17 to 40
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0029
+    [cx1.h                     : 515]     Lv1 scanning from bucket 40 to 68
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0032
+    [cx1.h                     : 515]     Lv1 scanning from bucket 68 to 100
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0020
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0026
+    [cx1.h                     : 515]     Lv1 scanning from bucket 100 to 135
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0025
+    [cx1.h                     : 515]     Lv1 scanning from bucket 135 to 183
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0013
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0027
+    [cx1.h                     : 515]     Lv1 scanning from bucket 183 to 274
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0023
+    [cx1.h                     : 515]     Lv1 scanning from bucket 274 to 406
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0020
+    [cx1.h                     : 515]     Lv1 scanning from bucket 406 to 630
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0018
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 630 to 1021
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0021
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1021 to 1499
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0020
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1499 to 2070
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0022
+    [cx1.h                     : 515]     Lv1 scanning from bucket 2070 to 2866
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0021
+    [cx1.h                     : 515]     Lv1 scanning from bucket 2866 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0173
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0061
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0815
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_kmer_count.cpp        : 860]     Total number of candidate reads: 58(158)
+    [cx1_kmer_count.cpp        : 871]     Total number of solid edges: 6834
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.5067
+    [utils.h                   : 126]     Real: 0.6982	user: 0.1834	sys: 0.2153	maxrss: 94268
+--- [Tue Dec 11 15:50:36 2018] Building graph for k = 21 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k21/21 --num_cpu_threads 40 -k 21 --kmer_from 0 --num_edge_files 13 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k21/21 --need_mercy
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 6834
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 187924, number contigs: 0, number multiplicity: 8542
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 46992, multiplicity vector: 8542
+    [cx1_seq2sdbg.cpp          : 455]     Adding mercy edges...
+    [cx1_seq2sdbg.cpp          : 373]     Number of reads: 58, Number of mercy edges: 495
+    [cx1_seq2sdbg.cpp          : 462]     Done. Time elapsed: 0.0782
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 46992, multiplicity vector: 8542
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.1193
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 62938
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 5863
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.0636
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 78
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0025
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0057
+    [cx1.h                     : 515]     Lv1 scanning from bucket 78 to 302
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0025
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0025
+    [cx1.h                     : 515]     Lv1 scanning from bucket 302 to 725
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0024
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0025
+    [cx1.h                     : 515]     Lv1 scanning from bucket 725 to 1421
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0024
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1421 to 2478
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0025
+    [cx1.h                     : 515]     Lv1 scanning from bucket 2478 to 4163
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0032
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0025
+    [cx1.h                     : 515]     Lv1 scanning from bucket 4163 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0180
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0084
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0618
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     251 5552 1711 1776 5543 149 34 40 104
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 15160
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 14582
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 251
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.1621
+    [utils.h                   : 126]     Real: 0.4070	user: 0.5352	sys: 0.1717	maxrss: 268608
+--- [Tue Dec 11 15:50:36 2018] Assembling contigs from SdBG for k = 21 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k21/21 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k21/21 Done. Time elapsed: 0.041261
+    [assembler.cpp             : 152]     Number of Edges: 15160; K value: 21
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 36; time elapsed: 0.0265
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 114; time elapsed: 0.0134
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 210; time elapsed: 0.0136
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 340; time elapsed: 0.0137
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 432; time elapsed: 0.0138
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 42; Accumulated tips removed: 438; time elapsed: 0.0137
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.094862
+    [assembler.cpp             : 188]     unitig graph size: 210, time for building: 0.005499
+    [assembler.cpp             : 211]     Number of bubbles removed: 42, Time elapsed(sec): 0.000385
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 4, Time elapsed(sec): 0.000206
+    [assembler.cpp             : 243]     Number unitigs disconnected: 71, time: 0.000257
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 13, time: 0.000195
+    [assembler.cpp             : 200]     Tips removed: 0, time: 0.000541
+    [assembler.cpp             : 211]     Number of bubbles removed: 6, Time elapsed(sec): 0.000132
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000107
+    [assembler.cpp             : 243]     Number unitigs disconnected: 20, time: 0.000194
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000056
+    [assembler.cpp             : 200]     Tips removed: 18, time: 0.000584
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.000104
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000108
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000177
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000046
+    [assembler.cpp             : 132]     Total length: 4479, N50: 607, Mean: 159, number of contigs: 28
+    [assembler.cpp             : 133]     Maximum length: 1161
+    [assembler.cpp             : 290]     Time to output: 0.000798
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 5, complex bubbles removed: 0, time: 0.000766
+    [assembler.cpp             : 132]     Total length: 3947, N50: 2785, Mean: 281, number of contigs: 14
+    [assembler.cpp             : 133]     Maximum length: 2785
+    [utils.h                   : 126]     Real: 0.2984	user: 3.7696	sys: 0.0397	maxrss: 34568
+--- [Tue Dec 11 15:50:37 2018] Local assembling k = 21 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.local.fa --kmax 29
+    [local_assembler.cpp       :  89]     Number of contigs: 5, Mapper size: 427
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 494.85 sd: 50.83
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 924, added 585 reads for local assembly
+    [utils.h                   : 126]     Real: 0.1669	user: 1.6314	sys: 0.0040	maxrss: 6752
+--- [Tue Dec 11 15:50:37 2018] Extracting iterative edges from k = 21 to 29 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.bubble_seq.fa -t 40 -k 21 -s 8 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k29/29 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 28
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 80
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 302. Iterative edges: 398
+    [iterate_edges.cpp         : 451]     Writing iterative edges...
+    [utils.h                   : 126]     Real: 0.3506	user: 1.1751	sys: 0.0729	maxrss: 87032
+--- [Tue Dec 11 15:50:37 2018] Building graph for k = 29 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k29/29 --num_cpu_threads 40 -k 29 --kmer_from 21 --num_edge_files 1 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k29/29 --addi_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.addi.fa --local_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.local.fa --contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.contigs.fa --bubble brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k21.bubble_seq.fa
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 398
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 26893, number contigs: 69, number multiplicity: 467
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 7284, multiplicity vector: 467
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 7284, multiplicity vector: 467
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0052
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 8434
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 3644
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.0875
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 85
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0032
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0058
+    [cx1.h                     : 515]     Lv1 scanning from bucket 85 to 331
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0029
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0030
+    [cx1.h                     : 515]     Lv1 scanning from bucket 331 to 818
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0030
+    [cx1.h                     : 515]     Lv1 scanning from bucket 818 to 1631
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0030
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1631 to 2995
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0032
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0028
+    [cx1.h                     : 515]     Lv1 scanning from bucket 2995 to 4924
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0034
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0028
+    [cx1.h                     : 515]     Lv1 scanning from bucket 4924 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0173
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0047
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0618
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     13 3156 976 1019 3105 11 5 3 6
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 8294
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 8256
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 13
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.1052
+    [utils.h                   : 126]     Real: 0.2600	user: 0.1369	sys: 0.0898	maxrss: 82724
+--- [Tue Dec 11 15:50:38 2018] Assembling contigs from SdBG for k = 29 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k29/29 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k29/29 Done. Time elapsed: 0.036437
+    [assembler.cpp             : 152]     Number of Edges: 8294; K value: 29
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 0; time elapsed: 0.0285
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 0; time elapsed: 0.0134
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 0; time elapsed: 0.0085
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 2; time elapsed: 0.0002
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 16; time elapsed: 0.0006
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 58; Accumulated tips removed: 18; time elapsed: 0.0006
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.052482
+    [assembler.cpp             : 188]     unitig graph size: 27, time for building: 0.003643
+    [assembler.cpp             : 211]     Number of bubbles removed: 14, Time elapsed(sec): 0.001095
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 2, Time elapsed(sec): 0.001647
+    [assembler.cpp             : 243]     Number unitigs disconnected: 1, time: 0.000154
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000022
+    [assembler.cpp             : 200]     Tips removed: 0, time: 0.000475
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.000100
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000096
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000130
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000025
+    [assembler.cpp             : 132]     Total length: 3754, N50: 3558, Mean: 1251, number of contigs: 3
+    [assembler.cpp             : 133]     Maximum length: 3558
+    [assembler.cpp             : 290]     Time to output: 0.001675
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 0, complex bubbles removed: 0, time: 0.000114
+    [assembler.cpp             : 132]     Total length: 3558, N50: 3558, Mean: 3558, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3558
+    [utils.h                   : 126]     Real: 0.1567	user: 1.9979	sys: 0.0206	maxrss: 30452
+--- [Tue Dec 11 15:50:38 2018] Local assembling k = 29 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.local.fa --kmax 39
+    [local_assembler.cpp       :  89]     Number of contigs: 0, Mapper size: 0
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 0.00 sd: -nan
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 0, added 0 reads for local assembly
+    [utils.h                   : 126]     Real: 0.0443	user: 1.0901	sys: 0.0000	maxrss: 9036
+--- [Tue Dec 11 15:50:38 2018] Extracting iterative edges from k = 29 to 39 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.bubble_seq.fa -t 40 -k 29 -s 10 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k39/39 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 32
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 32
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 187. Iterative edges: 176
+    [iterate_edges.cpp         : 451]     Writing iterative edges...
+    [utils.h                   : 126]     Real: 0.4341	user: 1.1194	sys: 0.0041	maxrss: 41972
+--- [Tue Dec 11 15:50:38 2018] Building graph for k = 39 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k39/39 --num_cpu_threads 40 -k 39 --kmer_from 29 --num_edge_files 1 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k39/39 --addi_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.addi.fa --local_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.local.fa --contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.contigs.fa --bubble brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k29.bubble_seq.fa
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 176
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 31598, number contigs: 44, number multiplicity: 220
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 8260, multiplicity vector: 220
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 8620, multiplicity vector: 440
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0053
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 9310
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 5351
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.0667
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 70
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0026
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0055
+    [cx1.h                     : 515]     Lv1 scanning from bucket 70 to 335
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 335 to 899
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0021
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0021
+    [cx1.h                     : 515]     Lv1 scanning from bucket 899 to 1970
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0023
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1970 to 3528
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0024
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 3528 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0185
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0062
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0496
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     6 3017 930 956 2977 3 5 3 3
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 7900
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 7880
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 6
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.3853
+    [utils.h                   : 126]     Real: 0.5072	user: 0.1436	sys: 0.1025	maxrss: 84356
+--- [Tue Dec 11 15:50:39 2018] Assembling contigs from SdBG for k = 39 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k39/39 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k39/39 Done. Time elapsed: 0.036198
+    [assembler.cpp             : 152]     Number of Edges: 7900; K value: 39
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 0; time elapsed: 0.0478
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 0; time elapsed: 0.0229
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 2; time elapsed: 0.0196
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 2; time elapsed: 0.0113
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 4; time elapsed: 0.0135
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 64; Accumulated tips removed: 6; time elapsed: 0.0173
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 78; Accumulated tips removed: 8; time elapsed: 0.0133
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.148256
+    [assembler.cpp             : 188]     unitig graph size: 18, time for building: 0.008382
+    [assembler.cpp             : 211]     Number of bubbles removed: 10, Time elapsed(sec): 0.001509
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 1, Time elapsed(sec): 0.001661
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000155
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000022
+    [assembler.cpp             : 200]     Tips removed: 0, time: 0.000566
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.000096
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000095
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000129
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000025
+    [assembler.cpp             : 132]     Total length: 3568, N50: 3568, Mean: 3568, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3568
+    [assembler.cpp             : 290]     Time to output: 0.001674
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 0, complex bubbles removed: 0, time: 0.000120
+    [assembler.cpp             : 132]     Total length: 3568, N50: 3568, Mean: 3568, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3568
+    [utils.h                   : 126]     Real: 0.2408	user: 3.6692	sys: 0.0231	maxrss: 18188
+--- [Tue Dec 11 15:50:39 2018] Local assembling k = 39 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.local.fa --kmax 59
+    [local_assembler.cpp       :  89]     Number of contigs: 0, Mapper size: 0
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 0.00 sd: -nan
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 0, added 0 reads for local assembly
+    [utils.h                   : 126]     Real: 0.0403	user: 1.0394	sys: 0.0094	maxrss: 6752
+--- [Tue Dec 11 15:50:39 2018] Extracting iterative edges from k = 39 to 59 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.bubble_seq.fa -t 40 -k 39 -s 20 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k59/59 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 24
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 24
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 90. Iterative edges: 341
+    [iterate_edges.cpp         : 451]     Writing iterative edges...
+    [utils.h                   : 126]     Real: 0.2924	user: 1.0244	sys: 0.0129	maxrss: 27652
+--- [Tue Dec 11 15:50:40 2018] Building graph for k = 59 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k59/59 --num_cpu_threads 40 -k 59 --kmer_from 39 --num_edge_files 1 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k59/59 --addi_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.addi.fa --local_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.local.fa --contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.contigs.fa --bubble brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k39.bubble_seq.fa
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 341
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 44825, number contigs: 34, number multiplicity: 375
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 11488, multiplicity vector: 375
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 11488, multiplicity vector: 375
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0053
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 12588
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 5322
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.0610
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 48
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0025
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0068
+    [cx1.h                     : 515]     Lv1 scanning from bucket 48 to 274
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0030
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0031
+    [cx1.h                     : 515]     Lv1 scanning from bucket 274 to 775
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0032
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0035
+    [cx1.h                     : 515]     Lv1 scanning from bucket 775 to 1823
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0033
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0032
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1823 to 3504
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0035
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0037
+    [cx1.h                     : 515]     Lv1 scanning from bucket 3504 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0177
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0061
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0600
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     3 2967 917 948 2950 5 2 0 4
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 7796
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 7782
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 3
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.1423
+    [utils.h                   : 126]     Real: 0.2691	user: 0.1361	sys: 0.1089	maxrss: 86196
+--- [Tue Dec 11 15:50:40 2018] Assembling contigs from SdBG for k = 59 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k59/59 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k59/59 Done. Time elapsed: 0.036043
+    [assembler.cpp             : 152]     Number of Edges: 7796; K value: 59
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 0; time elapsed: 0.0384
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 0; time elapsed: 0.0135
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 0; time elapsed: 0.0136
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 2; time elapsed: 0.0113
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 2; time elapsed: 0.0179
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 64; Accumulated tips removed: 6; time elapsed: 0.0114
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 118; Accumulated tips removed: 6; time elapsed: 0.0135
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.121950
+    [assembler.cpp             : 188]     unitig graph size: 12, time for building: 0.027022
+    [assembler.cpp             : 211]     Number of bubbles removed: 6, Time elapsed(sec): 0.026881
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 1, Time elapsed(sec): 0.030261
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.035691
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.004429
+    [assembler.cpp             : 200]     Tips removed: 0, time: 0.186611
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.028522
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.026824
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.021679
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000026
+    [assembler.cpp             : 132]     Total length: 3588, N50: 3588, Mean: 3588, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3588
+    [assembler.cpp             : 290]     Time to output: 0.001708
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 0, complex bubbles removed: 0, time: 0.000129
+    [assembler.cpp             : 132]     Total length: 3588, N50: 3588, Mean: 3588, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3588
+    [utils.h                   : 126]     Real: 0.6084	user: 15.6961	sys: 0.0282	maxrss: 12064
+--- [Tue Dec 11 15:50:41 2018] Local assembling k = 59 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.local.fa --kmax 79
+    [local_assembler.cpp       :  89]     Number of contigs: 0, Mapper size: 0
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 0.00 sd: -nan
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 0, added 0 reads for local assembly
+    [utils.h                   : 126]     Real: 0.0541	user: 1.0816	sys: 0.0041	maxrss: 11084
+--- [Tue Dec 11 15:50:44 2018] Extracting iterative edges from k = 59 to 79 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.bubble_seq.fa -t 40 -k 59 -s 20 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k79/79 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 16
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 16
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 39. Iterative edges: 146
+    [iterate_edges.cpp         : 451]     Writing iterative edges...
+    [utils.h                   : 126]     Real: 0.3999	user: 1.1019	sys: 0.0000	maxrss: 13324
+--- [Tue Dec 11 15:50:44 2018] Building graph for k = 79 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k79/79 --num_cpu_threads 40 -k 79 --kmer_from 59 --num_edge_files 1 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k79/79 --addi_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.addi.fa --local_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.local.fa --contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.contigs.fa --bubble brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k59.bubble_seq.fa
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 146
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 33733, number contigs: 22, number multiplicity: 168
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 8620, multiplicity vector: 168
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 8620, multiplicity vector: 168
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0054
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 9218
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 4614
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.1017
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 38
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0061
+    [cx1.h                     : 515]     Lv1 scanning from bucket 38 to 198
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0030
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0031
+    [cx1.h                     : 515]     Lv1 scanning from bucket 198 to 625
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0031
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0030
+    [cx1.h                     : 515]     Lv1 scanning from bucket 625 to 1612
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0032
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0029
+    [cx1.h                     : 515]     Lv1 scanning from bucket 1612 to 3207
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0034
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0030
+    [cx1.h                     : 515]     Lv1 scanning from bucket 3207 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0175
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0079
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0595
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     5 2922 908 931 2925 2 0 0 3
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 7696
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 7686
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 5
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.1662
+    [utils.h                   : 126]     Real: 0.3332	user: 0.3019	sys: 0.0640	maxrss: 80736
+--- [Tue Dec 11 15:50:45 2018] Assembling contigs from SdBG for k = 79 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k79/79 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k79/79 Done. Time elapsed: 0.038442
+    [assembler.cpp             : 152]     Number of Edges: 7696; K value: 79
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 0; time elapsed: 0.0205
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 0; time elapsed: 0.0156
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 0; time elapsed: 0.0114
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 2; time elapsed: 0.0134
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 2; time elapsed: 0.0134
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 64; Accumulated tips removed: 4; time elapsed: 0.0135
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 128; Accumulated tips removed: 8; time elapsed: 0.0107
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 158; Accumulated tips removed: 8; time elapsed: 0.0002
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.099028
+    [assembler.cpp             : 188]     unitig graph size: 3, time for building: 0.002001
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.000133
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 1, Time elapsed(sec): 0.001767
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000141
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000022
+    [assembler.cpp             : 200]     Tips removed: 0, time: 0.000621
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.000090
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000087
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.000125
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.000019
+    [assembler.cpp             : 132]     Total length: 3608, N50: 3608, Mean: 3608, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3608
+    [assembler.cpp             : 290]     Time to output: 0.002262
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 0, complex bubbles removed: 0, time: 0.029833
+    [assembler.cpp             : 132]     Total length: 3608, N50: 3608, Mean: 3608, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3608
+    [utils.h                   : 126]     Real: 0.1950	user: 5.0803	sys: 0.0202	maxrss: 12064
+--- [Tue Dec 11 15:50:45 2018] Local assembling k = 79 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.local.fa --kmax 99
+    [local_assembler.cpp       :  89]     Number of contigs: 0, Mapper size: 0
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 0.00 sd: -nan
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 0, added 0 reads for local assembly
+    [utils.h                   : 126]     Real: 0.0750	user: 1.0316	sys: 0.0084	maxrss: 6756
+--- [Tue Dec 11 15:50:46 2018] Extracting iterative edges from k = 79 to 99 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.bubble_seq.fa -t 40 -k 79 -s 20 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k99/99 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 4
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 4
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 6. Iterative edges: 29
+    [iterate_edges.cpp         : 451]     Writing iterative edges...
+    [utils.h                   : 126]     Real: 0.7857	user: 0.9871	sys: 0.0100	maxrss: 6756
+--- [Tue Dec 11 15:50:46 2018] Building graph for k = 99 ---
+/gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_sdbg_build seq2sdbg --host_mem 243342957772 --mem_flag 1 --gpu_mem 0 --output_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k99/99 --num_cpu_threads 40 -k 99 --kmer_from 79 --num_edge_files 1 --input_prefix brassica_napus_plasmid_contigs.fixed.fa/tmp/k99/99 --addi_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.addi.fa --local_contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.local.fa --contig brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.contigs.fa --bubble brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k79.bubble_seq.fa
+    [sdbg_builder.cpp          : 339]     Host memory to be used: 243342957772
+    [sdbg_builder.cpp          : 340]     Number CPU threads: 40
+    [cx1.h                     : 450]     Preparing data...
+    [cx1_seq2sdbg.cpp          : 394]     Number edges: 29
+    [cx1_seq2sdbg.cpp          : 434]     Bases to reserve: 13803, number contigs: 4, number multiplicity: 33
+    [cx1_seq2sdbg.cpp          : 440]     Before reading, sizeof seq_package: 3492, multiplicity vector: 33
+    [cx1_seq2sdbg.cpp          : 529]     After reading, sizeof seq_package: 3492, multiplicity vector: 33
+    [cx1.h                     : 457]     Preparing data... Done. Time elapsed: 0.0052
+    [cx1.h                     : 464]     Preparing partitions and initialing global data...
+    [cx1_seq2sdbg.cpp          : 740]     Memory for sequence: 3660
+    [cx1_seq2sdbg.cpp          : 741]     max # lv.1 items = 1896
+    [cx1.h                     : 480]     Preparing partitions and initialing global data... Done. Time elapsed: 0.1260
+    [cx1.h                     : 486]     Start main loop...
+    [cx1.h                     : 515]     Lv1 scanning from bucket 0 to 38
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0053
+    [cx1.h                     : 515]     Lv1 scanning from bucket 38 to 196
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0018
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0021
+    [cx1.h                     : 515]     Lv1 scanning from bucket 196 to 744
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0019
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 744 to 2002
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0020
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0019
+    [cx1.h                     : 515]     Lv1 scanning from bucket 2002 to 4079
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0018
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0015
+    [cx1.h                     : 515]     Lv1 scanning from bucket 4079 to 65536
+    [cx1.h                     : 528]     Lv1 scanning done. Large diff: 0. Time elapsed: 0.0177
+    [cx1.h                     : 594]     Lv1 fetching & sorting done. Time elapsed: 0.0056
+    [cx1.h                     : 607]     Main loop done. Time elapsed: 0.0458
+    [cx1.h                     : 613]     Postprocessing...
+    [cx1_seq2sdbg.cpp          :1139]     Number of $ A C G T A- C- G- T-:
+    [cx1_seq2sdbg.cpp          :1142]     3 2785 866 873 2756 0 1 0 0
+    [cx1_seq2sdbg.cpp          :1151]     Total number of edges: 7284
+    [cx1_seq2sdbg.cpp          :1152]     Total number of ONEs: 7280
+    [cx1_seq2sdbg.cpp          :1153]     Total number of $v edges: 3
+    [cx1.h                     : 621]     Postprocess done. Time elapsed: 0.3160
+    [utils.h                   : 126]     Real: 0.4934	user: 0.1541	sys: 0.1348	maxrss: 87028
+--- [Tue Dec 11 15:50:47 2018] Assembling contigs from SdBG for k = 99 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core assemble -s brassica_napus_plasmid_contigs.fixed.fa/tmp/k99/99 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k99 -t 40 --min_standalone 300.0 --prune_level 2 --merge_len 20 --merge_similar 0.95 --low_local_ratio 0.2 --min_depth 2 --bubble_level 2 --max_tip_len -1 --careful_bubble
+    [assembler.cpp             : 148]     Loading succinct de Bruijn graph: brassica_napus_plasmid_contigs.fixed.fa/tmp/k99/99 Done. Time elapsed: 0.035905
+    [assembler.cpp             : 152]     Number of Edges: 7284; K value: 99
+    [assembler.cpp             : 162]     Number of CPU threads: 40
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 2; Accumulated tips removed: 0; time elapsed: 0.0269
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 4; Accumulated tips removed: 0; time elapsed: 0.0151
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 8; Accumulated tips removed: 0; time elapsed: 0.0134
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 16; Accumulated tips removed: 0; time elapsed: 0.0135
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 32; Accumulated tips removed: 2; time elapsed: 0.0135
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 64; Accumulated tips removed: 2; time elapsed: 0.0133
+    [assembly_algorithms.cpp   : 162]     Removing tips with length less than 128; Accumulated tips removed: 4; time elapsed: 0.0155
+    [assembly_algorithms.cpp   : 170]     Removing tips with length less than 198; Accumulated tips removed: 4; time elapsed: 0.0113
+    [assembler.cpp             : 179]     Tips removal done! Time elapsed(sec): 0.122718
+    [assembler.cpp             : 188]     unitig graph size: 1, time for building: 0.029789
+    [assembler.cpp             : 211]     Number of bubbles removed: 0, Time elapsed(sec): 0.021337
+    [assembler.cpp             : 225]     Number of complex bubbles removed: 0, Time elapsed(sec): 0.000107
+    [assembler.cpp             : 243]     Number unitigs disconnected: 0, time: 0.029010
+    [assembler.cpp             : 265]     Unitigs removed in excessive pruning: 0, time: 0.004257
+    [assembler.cpp             : 132]     Total length: 3628, N50: 3628, Mean: 3628, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3628
+    [assembler.cpp             : 290]     Time to output: 0.002287
+    [assembler.cpp             : 317]     Number of local low depth unitigs removed: 0, complex bubbles removed: 0, time: 0.029690
+    [assembler.cpp             : 132]     Total length: 3628, N50: 3628, Mean: 3628, number of contigs: 1
+    [assembler.cpp             : 133]     Maximum length: 3628
+    [utils.h                   : 126]     Real: 0.2931	user: 8.7556	sys: 0.0164	maxrss: 12068
+--- [Tue Dec 11 15:50:47 2018] Local assembling k = 99 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core local -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k99.contigs.fa -l brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib -t 40 -o brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k99.local.fa --kmax 119
+    [local_assembler.cpp       :  89]     Number of contigs: 0, Mapper size: 0
+    [read_lib_functions-inl.h  : 256]     Before reading, sizeof seq_package: 42964
+    [read_lib_functions-inl.h  : 260]     After reading, sizeof seq_package: 42964
+    [local_assembler.cpp       : 330]     Lib 0, insert size: 0.00 sd: -nan
+    [local_assembler.cpp       : 462]     Lib 0: total 944 reads, aligned 0, added 0 reads for local assembly
+    [utils.h                   : 126]     Real: 0.0465	user: 1.0746	sys: 0.0039	maxrss: 6756
+--- [Tue Dec 11 15:50:48 2018] Extracting iterative edges from k = 99 to 119 ---
+cmd: /gnu/store/nbzvifvnsbqz2bjpv76snpp7s18b4fal-megahit-1.1.2/bin/megahit_asm_core iterate -c brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k99.contigs.fa -b brassica_napus_plasmid_contigs.fixed.fa/intermediate_contigs/k99.bubble_seq.fa -t 40 -k 99 -s 20 -o brassica_napus_plasmid_contigs.fixed.fa/tmp/k119/119 -r brassica_napus_plasmid_contigs.fixed.fa/tmp/reads.lib.bin -f binary
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 0
+    [iterate_edges.cpp         : 570]     Number of crusial kmers: 0
+    [iterate_edges.cpp         : 447]     Total: 944, aligned: 0. Iterative edges: 0
+    [utils.h                   : 126]     Real: 0.0349	user: 0.6650	sys: 0.0000	maxrss: 6756
+--- [Tue Dec 11 15:50:48 2018] Merging to output final contigs ---
+--- [STAT] 1 contigs, total 3628 bp, min 3628 bp, max 3628 bp, avg 3628 bp, N50 3628 bp
+--- [Tue Dec 11 15:50:48 2018] ALL DONE. Time elapsed: 13.790099 seconds ---

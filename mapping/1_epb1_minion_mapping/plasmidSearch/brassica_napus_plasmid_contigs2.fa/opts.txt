@@ -1,0 +1,9 @@
+-1
+brassica_napus_plasmid.1.fq
+-2
+brassica_napus_plasmid.2.fq
+-o
+brassica_napus_plasmid_contigs2.fa
+-t
+40
+MEGAHIT_TEMP_DIR: brassica_napus_plasmid_contigs2.fa/tmp/

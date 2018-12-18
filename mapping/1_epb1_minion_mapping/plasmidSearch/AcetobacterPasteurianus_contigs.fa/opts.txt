@@ -1,0 +1,9 @@
+-1
+AcetobacterPasteurianus.1.fq
+-2
+AcetobacterPasteurianus.2.fq
+-o
+AcetobacterPasteurianus_contigs.fa
+-t
+40
+MEGAHIT_TEMP_DIR: AcetobacterPasteurianus_contigs.fa/tmp/

@@ -1,0 +1,9 @@
+-1
+nostoc_azollae_plasmid.fixed.1.fq
+-2
+nostoc_azollae_plasmid.fixed.2.fq
+-o
+nostoc_azollae_plasmid_contigs.fixed.fa
+-t
+40
+MEGAHIT_TEMP_DIR: nostoc_azollae_plasmid_contigs.fixed.fa/tmp/

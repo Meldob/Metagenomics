@@ -1,0 +1,9 @@
+-1
+AcetobacterPasteurianusFasta.1.fq
+-2
+AcetobacterPasteurianusFasta.2.fq
+-o
+AcetobacterPasteurianusFastaAssembly.fna
+-t
+40
+MEGAHIT_TEMP_DIR: AcetobacterPasteurianusFastaAssembly.fna/tmp/
