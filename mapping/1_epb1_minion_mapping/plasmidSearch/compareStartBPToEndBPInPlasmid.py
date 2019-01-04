@@ -8,22 +8,20 @@
 #reverseFileFirst500 = 'compareStartBPToEndBPInPlasmid_TestText2.txt'
 
 #BRASSICA PLASMID TEST
-filePath = 'brassica_napus_plasmid.fixed.bam'
+#filePath = 'brassica_napus_plasmid.fixed.bam'
 
-first500ReverseFirstRead = '/final.contigs.brassica.first500_firstRead_2.sam'
-last500ForwardSecondRead = '/final.contigs.brassica.last500_2ndRead_1.sam'
-testName = 'first500ReverseFirstRead vs last500ForwardSecondRead'
-
-first500ReverseSecondRead = '/final.contigs.brassica.first500_2ndRead_2.sam'
-last500ForwardFirstRead = '/final.contigs.brassica.last500_firstRead_1.sam'
-testName2 = 'first500ReverseSecondRead vs last500ForwardFirstRead'
+#first500ReverseFirstRead = '/final.contigs.brassica.first500_firstRead_2.sam'
+#last500ForwardSecondRead = '/final.contigs.brassica.last500_2ndRead_1.sam'
+#first500ReverseSecondRead = '/final.contigs.brassica.first500_2ndRead_2.sam'
+#last500ForwardFirstRead = '/final.contigs.brassica.last500_firstRead_1.sam'
 
 #NOSTOC PLASMID TEST
-#filePath = 'nostoc_azollae_plasmid.fixed.bam'
-#forwardFileFirst500 = '/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq_1st500_1.sam'
-#forwardFileLast500 = '/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq_last500_1.sam'
-#reverseFileLast500 = '/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq_last500_2.sam'
-#reverseFileFirst500 = '/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq_1st500_2.sam'
+filePath = 'nostoc_azollae_plasmid.fixed.bam'
+
+first500ReverseFirstRead = '/final.contigs.nostoc.first500_firstRead_2.sam'
+last500ForwardSecondRead = '/final.contigs.nostoc.last500_2ndRead_1.sam'
+first500ReverseSecondRead = '/final.contigs.nostoc.first500_2ndRead_2.sam'
+last500ForwardFirstRead = '/final.contigs.nostoc.last500_firstRead_1.sam'
 
 
 #ACETOBACTER PLASMID TEST
@@ -41,6 +39,9 @@ fullFilePathFirst500ReverseFirstRead = filePath + first500ReverseFirstRead
 fullFilePathFirst500ReverseSecondRead = filePath + first500ReverseSecondRead
 fullFilePathLast500ForwardFirstRead = filePath + last500ForwardFirstRead
 
+#Defining tests
+testName = 'first500ReverseFirstRead vs last500ForwardSecondRead'
+testName2 = 'first500ReverseSecondRead vs last500ForwardFirstRead'
 
 #first code compares reads making up the forward strands in the last 500bp of the assembled contig which were read second to the reads in the reverse strand that cover the first 500bp of the assembled contig that were read first
 
