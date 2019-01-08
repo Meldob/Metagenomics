@@ -23,20 +23,39 @@ for line in samfile:
     if contigIdentifier not in contigRefDict:
         contigLength = samfile.lengths[samfile.get_tid(contigIdentifier)]
         contigRefDict[contigIdentifier] = contigLength
-    #find reads associated with first 500bp of contig
-    first500Reads = samfile.fetch(str(contigIdentifier), 1, 500)
-    #of these reads, find those that are the first read and are reverse mapped
-    for read in first500Reads:
-        if not read.is_secondary:
-            if read.is_reverse:
-                first5001st2ReadList.append(read)
-    print first5001st2ReadList            
-                
-    #then find those reads that are the second read and are reverse mapped
+        #checks that contig is > 1000bp
+        if contigLength > 1000:
+            #find reads associated with first 500bp of contig
+            first500Reads = samfile.fetch(str(contigIdentifier), 1, 500)
+            for read in first500Reads:
+                queryName = read.query_name
+                #exclude those reads that are forward mapped
+                if read.is_reverse:
+                    #include those that are first reads
+                    if not read.is_secondary:            
+                        first5001st2ReadList.append(queryName)
+                    #include those that are second reads
+                    if read.is_secondary:
+                        first5002nd2ReadList.append(queryName)
+            #find reads associated with last 500bp of contig
+            last500Reads = samfile.fetch(str(contigIdentifier), (contigLength-500), contigLength)
+            for read in last500Reads:
+                queryName = read.query_name
+                #include those that are forward mapped
+                if not read.is_reverse:
+                    #include those that are first reads
+                    if not read.is_secondary:            
+                        last5001st2ReadList.append(queryName)
+                    #include those that are second reads
+                    if read.is_secondary:
+                        last5002nd2ReadList.append(queryName)
+        print('Results for the contig: ' + contigIdentifier)
+        print('First 500bp, first read, reverse mapping list is: ' + str(first5001st2ReadList))
+        print('First 500bp, second read, reverse mapping list is: ' + str(first5002nd2ReadList))
+        print('Last 500bp, first read, forward mapping list is: ' + str(last5001st1ReadList))
+        print('Last 500bp, second read, forward mapping list is: ' + str(last5002nd1ReadList))
     
-    #find reads associated with last 500bp of contig
-    #last500Reads = samfile.fetch(str(contigIdentifier), (contigLength-500), contigLength)
-    #of these reads, find those that are the first read and are forward mapped
+            
     
     #then find those reads that are the second read and are forward mapped
     
