@@ -10,17 +10,26 @@ import pysam
 #opens bam file for reading
 samfile = pysam.AlignmentFile(inputFile, "rb")
 
-#create list to store names of all contigs
-contigRefList = []
+#create dictionary to store names and length of all contigs
+contigRefDict = {}
 #iterate through lines to find all contigs
 for line in samfile:
-    contigIdentifier = line.reference_name    
-    if contigIdentifier not in contigRefList:
-        contigRefList.append(contigIdentifier)
+    contigIdentifier = line.reference_name
+    #if the contiIdentifier isn't already in the dictionary, then add it
+    if contigIdentifier not in contigRefDict:
         contigLength = samfile.lengths[samfile.get_tid(contigIdentifier)]
-        print(contigIdentifier)
-        print(contigLength)
-        
+        contigRefDict[contigIdentifier] = contigLength
+    #find reads associated with first 500bp of contig
+    iter = samfile.fetch(str(ref), 1, 500)
+    #of these reads, find those that are the first read and are reverse mapped
+    #then find those reads that are the second read and are reverse mapped
+    
+    #find reads associated with last 500bp of contig
+    #of these reads, find those that are the first read and are forward mapped
+    #then find those reads that are the second read and are forward mapped
+    
+    
+print(contigRefDict)
         
 
         
@@ -31,7 +40,7 @@ for line in samfile:
 #for ref in contigRefList:
 #    print(ref)
 #    print(line.get_reference_length(self, ref))
-    #iter = samfile.fetch(str(ref), 1, 500)
+    #
     #for x in iter:
     #    print (str(x))
         
