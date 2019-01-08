@@ -12,6 +12,10 @@ samfile = pysam.AlignmentFile(inputFile, "rb")
 
 #create dictionary to store names and length of all contigs
 contigRefDict = {}
+first5001st2ReadList = []
+first5002nd2ReadList = []    
+last5001st1ReadList = []
+last5002nd1ReadList = []
 #iterate through lines to find all contigs
 for line in samfile:
     contigIdentifier = line.reference_name
@@ -20,12 +24,20 @@ for line in samfile:
         contigLength = samfile.lengths[samfile.get_tid(contigIdentifier)]
         contigRefDict[contigIdentifier] = contigLength
     #find reads associated with first 500bp of contig
-    iter = samfile.fetch(str(ref), 1, 500)
+    first500Reads = samfile.fetch(str(contigIdentifier), 1, 500)
     #of these reads, find those that are the first read and are reverse mapped
+    for read in first500Reads:
+        if not read.is_secondary:
+            if read.is_reverse:
+                first5001st2ReadList.append(read)
+    print first5001st2ReadList            
+                
     #then find those reads that are the second read and are reverse mapped
     
     #find reads associated with last 500bp of contig
+    #last500Reads = samfile.fetch(str(contigIdentifier), (contigLength-500), contigLength)
     #of these reads, find those that are the first read and are forward mapped
+    
     #then find those reads that are the second read and are forward mapped
     
     
