@@ -1,10 +1,15 @@
 #!/usr/bin/env python2
 
+#import relevant modules
+import pysam
+import argparse
+
+parser = argparse.ArgumentParser(description='Find plasmids within a bam file.')
 
 #changeable element
 #inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
 #inputFile = "AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam"
-inputFile = 'nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq.bam'
+#inputFile = "nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq.bam"
 
 
 #please note for ease of naming conventions, the reads that are to be compared are going to be referred to as follows:
@@ -13,7 +18,6 @@ inputFile = 'nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_pl
 # - first500bp, second read, reverse read = readListB1
 # - last500bp, first read, forward read = readListB2
 
-import pysam
 
 #opens bam file for reading
 samfile = pysam.AlignmentFile(inputFile, "rb")
