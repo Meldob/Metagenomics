@@ -2,7 +2,9 @@
 
 
 #changeable element
-inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
+#inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
+inputFile = "AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam"
+
 
 #please note for ease of naming conventions, the reads that are to be compared are going to be referred to as follows:
 # - first500bp, first read, reverse read = readListA1
@@ -29,6 +31,8 @@ for line in samfile:
     if contigIdentifier not in contigRefDict:
         contigLength = samfile.lengths[samfile.get_tid(contigIdentifier)]
         contigRefDict[contigIdentifier] = contigLength
+        #create list of contigs that are likely to be plasmids
+        plasmidList = []
         #checks that contig is > 1000bp
         if contigLength > 1000:
             #find reads associated with first 500bp of contig
@@ -104,5 +108,11 @@ for line in samfile:
                 print("The matching identifiers when comparing first reads from the last 500bp with the 2nd reads from the first 500bp are: " + str(matches_readListB))
                 print("")
                 print("")
+            #create list of contigs
+            if contigIdentifier not in plasmidList:
+                if count_readListA or count_readListB >0:
+                    plasmidList.append(contigIdentifier)
+        #Report which contigs are likely to be plasmids
+        print(plasmidList)
                 
 samfile.close
