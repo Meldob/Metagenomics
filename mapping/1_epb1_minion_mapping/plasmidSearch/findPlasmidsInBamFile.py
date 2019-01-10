@@ -3,7 +3,8 @@
 
 #changeable element
 #inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
-inputFile = "AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam"
+#inputFile = "AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam"
+inputFile = 'nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq.bam'
 
 
 #please note for ease of naming conventions, the reads that are to be compared are going to be referred to as follows:
@@ -19,20 +20,20 @@ samfile = pysam.AlignmentFile(inputFile, "rb")
 
 #create dictionary to store names and length of all contigs
 contigRefDict = {}
-readListA1 = []
-readListA2 = []
-readListB1 = []    
-readListB2 = []
+plasmidList = []
 
 #iterate through lines to find all contigs
 for line in samfile:
     contigIdentifier = line.reference_name
     #if the contiIdentifier isn't already in the dictionary, then add it
     if contigIdentifier not in contigRefDict:
+        readListA1 = []
+        readListA2 = []
+        readListB1 = []    
+        readListB2 = []
         contigLength = samfile.lengths[samfile.get_tid(contigIdentifier)]
         contigRefDict[contigIdentifier] = contigLength
         #create list of contigs that are likely to be plasmids
-        plasmidList = []
         #checks that contig is > 1000bp
         if contigLength > 1000:
             #find reads associated with first 500bp of contig
@@ -112,7 +113,7 @@ for line in samfile:
             if contigIdentifier not in plasmidList:
                 if count_readListA or count_readListB >0:
                     plasmidList.append(contigIdentifier)
-        #Report which contigs are likely to be plasmids
-        print(plasmidList)
+#Report which contigs are likely to be plasmids
+print('It is likely that the following contigs are plasmids: ' + str(plasmidList))
                 
 samfile.close
