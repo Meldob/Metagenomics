@@ -5,6 +5,11 @@ import pysam
 import argparse
 
 parser = argparse.ArgumentParser(description='Find plasmids within a bam file.')
+parser.add_argument('--input', action = 'store', help = 'the bam input file')
+args = parser.parse_args()
+print( "Args: ", args)
+
+
 
 #changeable element
 #inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
