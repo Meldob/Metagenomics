@@ -7,7 +7,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Find plasmids within a bam file.')
 parser.add_argument('--input', action = 'store', help = 'the bam input file')
 args = parser.parse_args()
-print( "Args: ", args)
+print( "Args: ", vars(args))
 
 
 
