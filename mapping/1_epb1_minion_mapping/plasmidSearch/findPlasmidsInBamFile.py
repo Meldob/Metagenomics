@@ -5,7 +5,8 @@ import pysam
 import argparse
 
 parser = argparse.ArgumentParser(description='Find plasmids within a bam file.')
-parser.add_argument('--input', action = 'store', help = 'the bam input file')
+parser.add_argument('-inputFilePath', '-input', '-i', action = 'store', help = 'the bam input file')
+parser.add_argument('-outputFilePath', '-output', '-o', action = 'store', help = 'the output')
 args = parser.parse_args()
 print( "Args: ", vars(args))
 
