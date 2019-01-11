@@ -26,6 +26,8 @@ print outputFile
 # - first500bp, second read, reverse read = readListB1
 # - last500bp, first read, forward read = readListB2
 
+#Write a new file
+newFile = open(outputFile, "w")
 
 #opens bam file for reading
 samfile = pysam.AlignmentFile(inputFile, "rb")
@@ -35,6 +37,7 @@ contigRefDict = {}
 plasmidList = []
 
 #iterate through lines to find all contigs
+readCount = 0
 for line in samfile:
     contigIdentifier = line.reference_name
     #if the contiIdentifier isn't already in the dictionary, then add it
@@ -72,15 +75,15 @@ for line in samfile:
                     #include those that are second reads
                     if read.is_read2:
                         readListA2.append(queryName)
-            print('Results for the contig: ' + contigIdentifier)
-            print('First 500bp, first read, reverse mapping list is: ' + str(readListA1))
-            print('')
-            print('First 500bp, second read, reverse mapping list is: ' + str(readListB1))
-            print('')
-            print('Last 500bp, first read, forward mapping list is: ' + str(readListB2))
-            print('')
-            print('Last 500bp, second read, forward mapping list is: ' + str(readListA2))
-            print('')
+            newFile.write('Results for the contig: ' + contigIdentifier)
+            newFile.write('First 500bp, first read, reverse mapping list is: ' + str(readListA1))
+            newFile.write('')
+            newFile.write('First 500bp, second read, reverse mapping list is: ' + str(readListB1))
+            newFile.write('')
+            newFile.write('Last 500bp, first read, forward mapping list is: ' + str(readListB2))
+            newFile.write('')
+            newFile.write('Last 500bp, second read, forward mapping list is: ' + str(readListA2))
+            newFile.write('')
             #starts count for number of matches
             count_readListA = 0
             count_readListB = 0
@@ -93,39 +96,46 @@ for line in samfile:
                 for secondRead in readListA2:
                     if firstRead == secondRead:
                         count_readListA =+ 1
-                        print("It's a match, the identifier is: " + firstRead)
+                        newFile.write("It's a match, the identifier is: " + firstRead)
                         matches_readListA.append(firstRead)
             for firstRead in readListB1:
                 for secondRead in readListB2:
                     if firstRead == secondRead:
                         count_readListB =+ 1
-                        print("It's a match, the identifier is: " + firstRead)
+                        newFile.write("It's a match, the identifier is: " + firstRead)
                         matches_readListB.append(firstRead)            
             #If there are no matches, report this
             if count_readListA == 0:
-                print("")
-                print("There were no matches comparing first reads from the first 500bp with the 2nd reads form the last 500bp")
-                print("")
+                newFile.write("")
+                newFile.write("There were no matches comparing first reads from the first 500bp with the 2nd reads form the last 500bp")
+                newFile.write("")
             #print the matching list of identifiers
             else:
-                print("The matching identifiers when comparing first reads from the first 500bp with the 2nd reads from the last 500bp are: " + str(matches_readListA))
-                print("")
-                print("")
+                newFile.write("The matching identifiers when comparing first reads from the first 500bp with the 2nd reads from the last 500bp are: " + str(matches_readListA))
+                newFile.write("")
+                newFile.write("")
             #If there are no matches, report this
             if count_readListB == 0:
-                print("")
-                print("There were no matches comparing first reads from the last 500bp with the 2nd reads from the first 500bp")
-                print("")
+                newFile.write("")
+                newFile.write("There were no matches comparing first reads from the last 500bp with the 2nd reads from the first 500bp")
+                newFile.write("")
             #print the matching list of identifiers
             else:
-                print("The matching identifiers when comparing first reads from the last 500bp with the 2nd reads from the first 500bp are: " + str(matches_readListB))
-                print("")
-                print("")
+                newFile.write("The matching identifiers when comparing first reads from the last 500bp with the 2nd reads from the first 500bp are: " + str(matches_readListB))
+                newFile.write("")
+                newFile.write("")
             #create list of contigs
             if contigIdentifier not in plasmidList:
                 if count_readListA or count_readListB >0:
                     plasmidList.append(contigIdentifier)
+    readCount += 1
+    print("read " + str(readCount) + " processed")                
+    
 #Report which contigs are likely to be plasmids
-print('It is likely that the following contigs are plasmids: ' + str(plasmidList))
-                
+newFile.write('It is likely that the following contigs are plasmids: ' + str(plasmidList))
+        
+
+
+
+        
 samfile.close
