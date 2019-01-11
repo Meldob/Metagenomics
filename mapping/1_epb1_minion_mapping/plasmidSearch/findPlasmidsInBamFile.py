@@ -8,9 +8,9 @@ parser = argparse.ArgumentParser(description='Find plasmids within a bam file.')
 parser.add_argument('-inputFilePath', '-input', '-i', action = 'store', help = 'the bam input file')
 parser.add_argument('-outputFilePath', '-output', '-o', action = 'store', help = 'the output')
 args = parser.parse_args()
-print( "Args: ", vars(args))
-
-
+dict = vars(args)
+print( "Args: " + str(dict))
+print("arg1: " + str(dict.get("inputFilePath")))
 
 #changeable element
 #inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
