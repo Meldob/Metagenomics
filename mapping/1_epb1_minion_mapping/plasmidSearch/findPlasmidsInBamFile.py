@@ -9,8 +9,10 @@ parser.add_argument('-inputFilePath', '-input', '-i', action = 'store', help = '
 parser.add_argument('-outputFilePath', '-output', '-o', action = 'store', help = 'the output')
 args = parser.parse_args()
 dict = vars(args)
-print( "Args: " + str(dict))
-print("arg1: " + str(dict.get("inputFilePath")))
+inputFile = str(dict.get("inputFilePath"))
+outputFile = str(dict.get("outputFilePath"))
+print inputFile
+print outputFile
 
 #changeable element
 #inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
