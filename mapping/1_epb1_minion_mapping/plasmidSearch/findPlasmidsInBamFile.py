@@ -19,12 +19,6 @@ print outputFile
 # ./findPlasmidsInBamFile.py -i nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq.bam -o test2.txt
 # ./findPlasmidsInBamFile.py -i brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam -o test1.txt
 
-#changeable element
-#inputFile = "brassica_napus_plasmid.fixed.bam/final.contigs.fa.brassica_napus_plasmid.fixed.1.fq.bam"
-#inputFile = "AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam"
-#inputFile = "nostoc_azollae_plasmid.fixed.bam/final.contigs.fa.nostoc_azollae_plasmid.fixed.1.fq.bam"
-
-
 #please note for ease of naming conventions, the reads that are to be compared are going to be referred to as follows:
 # - first500bp, first read, reverse read = readListA1
 # - last500bp, second read, forward read = readListA2
@@ -42,7 +36,7 @@ plasmidList = []
 
 #iterate through lines to find all contigs
 contigCount = 0
-header = "contigName" + "\t" + "numberOfMatches" + "\t" + "matches" + "\t" + "forwardReads" + "\t" + "reverseReads"
+header = "contigName" + "\t" + "numberOfMatches" + "\t" + "matchingReads" + "\t" + "forwardReads" + "\t" + "reverseReads"
 newFile.write(header + "\n")
 for line in samfile:
     contigIdentifier = line.reference_name    
@@ -90,16 +84,14 @@ for line in samfile:
             for secondRead in readListA2:
                 if firstRead == secondRead:
                     count_readListA =+ 1
-                    #newFile.write("It's a match, the identifier is: " + firstRead)
                     matches_readListA.append(firstRead)
         for firstRead in readListB1:
             for secondRead in readListB2:
                 if firstRead == secondRead:
-                    #newFile.write("It's a match, the identifier is: " + firstRead)
                     matches_readListB.append(firstRead)
         match_readListB_length = len(matches_readListB)
         match_readListA_length = len(matches_readListA)
-        #print contig number
+        #print contig number and associated information
         newFile.write(contigIdentifier + '\t' + str(match_readListA_length + match_readListB_length) + '\t' + str(matches_readListA + matches_readListB) + '\t' + str(readListB2 + readListA2) + '\t' + str (readListA1 + readListB1))
         if contigIdentifier not in plasmidList:
             if count_readListA or count_readListB >0:
