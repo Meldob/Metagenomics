@@ -11,8 +11,6 @@ args = parser.parse_args()
 dict = vars(args)
 inputFile = str(dict.get("inputFilePath"))
 outputFile = str(dict.get("outputFilePath"))
-print inputFile
-print outputFile
 
 #test commands
 # ./findPlasmidsInBamFile.py -i AcetobacterPasteurianus.bam/final.contigs.fa.AcetobacterPasteurianus.1.fq.bam -o testAceto.txt
